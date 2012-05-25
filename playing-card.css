@@ -1,0 +1,50 @@
+body {
+	background-image: none;
+}
+
+.display {
+	background: -webkit-radial-gradient(50% 50%, 63% 53%, #E9EEEC, #87949B);
+	box-shadow: 0 0 10px rgba(0, 0, 0, .75) inset;
+	/* Enable hardware acceleration */
+	-webkit-transform: translateZ(0);
+}
+
+@-webkit-keyframes "rotate" {
+	from {
+		-webkit-transform: rotateY(0deg);
+		background-image: url("http://static.leanlinares.com.ar/playing-card/front.png");
+	}
+
+	/* Avoid smooth transition between background images */
+	49% { background-image: url("http://static.leanlinares.com.ar/playing-card/front.png"); }
+	50% { background-image: url("http://static.leanlinares.com.ar/playing-card/back.png"); }
+
+	to {
+		-webkit-transform: rotateY(180deg);
+		background-image: url("http://static.leanlinares.com.ar/playing-card/back.png");
+	}
+}
+
+.card {
+	width: 178px;
+	height: 250px;
+	border-radius: 5px;
+	position: absolute;
+	background-image: url("http://static.leanlinares.com.ar/playing-card/front.png");
+	left: 361px;
+	top: 100px;
+	/* Animation: name, duration, timing-function, delay, iteration-count, direction */
+	-webkit-animation: "rotate" 1s linear 0 infinite alternate;
+}
+
+.card::after {
+	content: " ";
+	position: absolute;
+	bottom: -50px;
+	left: 10px;
+	width: 158px;
+	height: 5px;
+	border-radius: 100%;
+	background-color: rgba(0, 0, 0, .05);
+	box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+}
