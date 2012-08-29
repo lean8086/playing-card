@@ -1,13 +1,13 @@
 .display {
-	background: radial-gradient(50% 50%, 63% 53%, #E9EEEC, #87949B);
+	background-image: -webkit-radial-gradient(50% 50%, 63% 53%, #E9EEEC, #87949B);
 	box-shadow: 0 0 10px rgba(0, 0, 0, .75) inset;
 	/* Enable hardware acceleration */
-	transform: translateZ(0);
+	-webkit-transform: translateZ(0);
 }
 
 @-webkit-keyframes rotate {
 	0% {
-		transform: rotateY(0deg);
+		-webkit-transform: rotateY(0deg);
 		background-image: url('http://leanlinares.s3-website-us-east-1.amazonaws.com/playing-card/front.png');
 	}
 
@@ -16,7 +16,7 @@
 	50% { background-image: url('http://leanlinares.s3-website-us-east-1.amazonaws.com/playing-card/back.png'); }
 
 	to {
-		transform: rotateY(180deg);
+		-webkit-transform: rotateY(180deg);
 		background-image: url('http://leanlinares.s3-website-us-east-1.amazonaws.com/playing-card/back.png');
 	}
 }
@@ -28,15 +28,15 @@
 	position: absolute;
 	background-image: url('http://leanlinares.s3-website-us-east-1.amazonaws.com/playing-card/front.png');
 	left: 361px;
-	top: 50px;
+	top: 75px;
 	/* Animation: name, duration, timing-function, delay, iteration-count, direction */
-	animation: 'rotate' 1s linear 0 infinite alternate;
+	-webkit-animation: 'rotate' 1s linear 0 infinite alternate;
 }
 
 .card::after {
-	content: ' ';
+	content: '';
 	position: absolute;
-	bottom: -50px;
+	bottom: -30px;
 	left: 10px;
 	width: 158px;
 	height: 5px;
