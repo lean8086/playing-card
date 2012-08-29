@@ -1,27 +1,23 @@
-body {
-	background-image: none;
-}
-
 .display {
-	background: -webkit-radial-gradient(50% 50%, 63% 53%, #E9EEEC, #87949B);
+	background: radial-gradient(50% 50%, 63% 53%, #E9EEEC, #87949B);
 	box-shadow: 0 0 10px rgba(0, 0, 0, .75) inset;
 	/* Enable hardware acceleration */
-	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
 }
 
-@-webkit-keyframes "rotate" {
-	from {
-		-webkit-transform: rotateY(0deg);
-		background-image: url("http://static.leanlinares.com.ar/playing-card/front.png");
+@-webkit-keyframes rotate {
+	0% {
+		transform: rotateY(0deg);
+		background-image: url('http://leanlinares.s3-website-us-east-1.amazonaws.com/playing-card/front.png');
 	}
 
 	/* Avoid smooth transition between background images */
-	49% { background-image: url("http://static.leanlinares.com.ar/playing-card/front.png"); }
-	50% { background-image: url("http://static.leanlinares.com.ar/playing-card/back.png"); }
+	49% { background-image: url('http://leanlinares.s3-website-us-east-1.amazonaws.com/playing-card/front.png'); }
+	50% { background-image: url('http://leanlinares.s3-website-us-east-1.amazonaws.com/playing-card/back.png'); }
 
 	to {
-		-webkit-transform: rotateY(180deg);
-		background-image: url("http://static.leanlinares.com.ar/playing-card/back.png");
+		transform: rotateY(180deg);
+		background-image: url('http://leanlinares.s3-website-us-east-1.amazonaws.com/playing-card/back.png');
 	}
 }
 
@@ -30,15 +26,15 @@ body {
 	height: 250px;
 	border-radius: 5px;
 	position: absolute;
-	background-image: url("http://static.leanlinares.com.ar/playing-card/front.png");
+	background-image: url('http://leanlinares.s3-website-us-east-1.amazonaws.com/playing-card/front.png');
 	left: 361px;
-	top: 100px;
+	top: 50px;
 	/* Animation: name, duration, timing-function, delay, iteration-count, direction */
-	-webkit-animation: "rotate" 1s linear 0 infinite alternate;
+	animation: 'rotate' 1s linear 0 infinite alternate;
 }
 
 .card::after {
-	content: " ";
+	content: ' ';
 	position: absolute;
 	bottom: -50px;
 	left: 10px;

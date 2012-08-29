@@ -6,9 +6,5 @@ Showing the two faces of a playing card on a unique DOM element.
 ## Instructions
 * Use only with Google Chrome.
 
-## Technologies
-* Hardware acceleration via CSS
-* CSS animations (keyframes)
-
-## Contact
-Twitter: [@lean8086](http://twitter.com/lean8086)
+## Credits
+Experiment by Leandro Linares [@lean8086](http://twitter.com/lean8086)
