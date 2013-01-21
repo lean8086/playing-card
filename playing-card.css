@@ -32,10 +32,10 @@ aside {
     height: 400px;
     margin: 2em 0;
     width: 960px;
-    background-image: radial-gradient(50% 50%, 63% 53%, #E9EEEC, #87949B);
+    background-image: -webkit-radial-gradient(50% 50%, 63% 53%, #E9EEEC, #87949B);
     box-shadow: 0 0 15px 0 #555 inset;
     /* Enable hardware acceleration */
-    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
 }
 
 .gh-ribbon {
@@ -45,9 +45,9 @@ aside {
     top: 0;
 }
 
-@keyframes rotate {
+@-webkit-keyframes rotate {
     0% {
-        transform: rotateY(0deg);
+        -webkit-transform: rotateY(0deg);
         background-image: url('front.png');
     }
 
@@ -56,7 +56,7 @@ aside {
     50% { background-image: url('back.png'); }
 
     to {
-        transform: rotateY(180deg);
+        -webkit-transform: rotateY(180deg);
         background-image: url('back.png');
     }
 }
@@ -70,7 +70,7 @@ aside {
     left: 361px;
     top: 75px;
     /* Animation: name, duration, timing-function, delay, iteration-count, direction */
-    animation: 'rotate' 1s linear 0 infinite alternate;
+    -webkit-animation: 'rotate' 1s linear 0 infinite alternate;
 }
 
 .card::after {
